@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl ControlLabel } from "react-bootstrap";
 import "./Login.css";
 
-export deafult function Login(props) {
+export default function Login(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
