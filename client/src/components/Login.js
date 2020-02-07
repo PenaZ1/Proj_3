@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl ControlLabel } from "react-bootstrap";
-import "./Login.css";
+import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+//import "./Login.css";
 
-export deafult function Login(props) {
+function Login(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     function validateForm() {
-        return email.length > 0 && PasswordPrompt.length > 0;
+        return email.length > 0 && password.length > 0;
     }
 
     function handleSubmit(event) {
@@ -41,3 +41,5 @@ export deafult function Login(props) {
         </div>
     );
 }
+
+export default Login;
