@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 const path = require('path');
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const session = require('express-session');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 const routes = require('./routes');
 const passport = require('./config/passport');
@@ -38,8 +39,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.listen(PORT, ()=>{
-  console.log('CORS-enabled web server listening on port: ' + PORT);
+app.listen(PORT, () => {
+  console.log(`CORS-enabled web server listening on port: ${PORT}`);
 });
 
 module.exports = app;
