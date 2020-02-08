@@ -4,6 +4,13 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const session = require('express-session');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/CloudCarry', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.on('error', (error) => {
+  // eslint-disable-next-line no-console
+  console.log(`Problem connection to the database${error}`);
+});
 
 const routes = require('./routes');
 const passport = require('./config/passport');
