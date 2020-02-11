@@ -3,9 +3,9 @@ const authRoutes = require('./auth');
 const User = require('../../db/User');
 
 router.post('/register', (req, res) => {
-  User.create(req.body, (err, newUser) => {
+  User.create(req.body, (err) => {
     if (err) throw err;
-    res.send(newUser);
+    res.end();
   });
 });
 
