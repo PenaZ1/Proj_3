@@ -95,3 +95,6 @@ typings/
 
 # JShint - TIM
 .jshintrc
+
+# node modules
+.node_modules
