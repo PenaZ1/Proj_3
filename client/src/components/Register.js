@@ -8,7 +8,7 @@ function Register(){
 
     async function signUp(e) {
         e.preventDefault();
-        let res = await axios.post('http://localhost:3001/api/register', {
+        let res = await axios.post('/api/register', {
             email: email,
             password: password
         })
