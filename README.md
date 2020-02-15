@@ -26,8 +26,8 @@ ADD AN IMAGE BY IMAGE WALK THROUGH WHEN ABLE
 
 -------------------------------
 ### Why the Project is Useful ###
-This app was created for an existing company. They needed a clean, fuctional and useable app to so that clients can order and pay for transportation. 
-SOMEONE PLEASE WRITE SOMETHING BETTER THAN THIS :'(
+This application is a theory crafted idea turned into reality. We ventured to created an application with a similar user experience found in common transportation applications today.
+
 
 The app also fulfilled a project assignment for University of Kansas Coding Boot Camp, August 2019 to February 2020. It provided us with the opportunity to work with the following technologies:
 * HTML5
