@@ -4,6 +4,7 @@ import Register from "components/Register";
 import MapContainer from "components/MapContainer"
 import Login from "components/Login";
 import TakeOff from "components/TakeOff";
+import Confirm from "components/Confirm";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Login></Login>
         <Register></Register>
         <TakeOff></TakeOff>
+        <Confirm></Confirm>
       </header>
     </div>
   );
