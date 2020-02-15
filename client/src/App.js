@@ -4,6 +4,7 @@ import Register from "components/Register";
 import MapContainer from "components/MapContainer"
 import Login from "components/Login";
 import TakeOff from "components/TakeOff";
+import Destination from "components/Destination";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Login></Login>
         <Register></Register>
         <TakeOff></TakeOff>
+        <Destination></Destination>
       </header>
     </div>
   );
