@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
+const axios = require('axios');
 
 export class MapContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
       <div style={{height: '400px', width: '400px'}}>
