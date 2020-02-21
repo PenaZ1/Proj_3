@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
 const locationSchema = new mongoose.Schema(
-  {},
+  {
+    name: { type: String, required: true },
+    lat: { type: String, required: true },
+    long: { type: String, required: true },
+  },
 );
 
 const Location = mongoose.model('location', locationSchema);
