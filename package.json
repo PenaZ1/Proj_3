@@ -69,7 +69,6 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-session": "^1.0.2",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-credit-cards": "^0.8.0"
+    "react-bootstrap": "^1.0.0-beta.16"
   }
 }

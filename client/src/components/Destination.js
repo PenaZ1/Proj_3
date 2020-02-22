@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Accordion, Card } from "react-bootstrap";
-const axios = require('axios');
 
 function Destination(props) {
     const [userChoice, setuserChoice] = useState("");
-    const [locations, setLocations] = useState([]);
-
-    useEffect(() => {
-        axios.get('/api/locations').then((res) => {
-            setLocations(res.data);
-        }).catch((err) => {
-            if (err) throw err
-        });
-    }, []);
 
     function validateForm() {
         return userChoice.length;
@@ -21,25 +11,80 @@ function Destination(props) {
     function handleSubmit(event) {
         event.preventDefault();
     }
-
     return (
-        <div>
+        <div classname="Login">
             <form onSubmit={handleSubmit}>
                 <Accordion>
-                    {locations.map((name, index) => {
-                        return (
-                            <Card>
-                                <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={index}>
-                                        {locations[index].name}
-                                    </Accordion.Toggle>
-                                </Card.Header>
-                                <Accordion.Collapse eventKey="0">
-                                    <Card.Body>Hello! I'm the body</Card.Body>
-                                </Accordion.Collapse>
-                            </Card>
-                        )
-                    })}
+                    <Card>
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                Click me! this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="0">
+                            <Card.Body>Hello! I'm the body</Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                                Click me!this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="1">
+                            <Card.Body>Hello! I'm another body</Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="2">
+                                Click me!this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="2">
+                            <Card.Body>Hello! I'm another body</Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="3">
+                                Click me!this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="3">
+                            <Card.Body>Hello! I'm another body</Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="4">
+                                Click me!this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="4">
+                            <Card.Body>Hello! I'm another body</Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey="5">
+                                Click me!this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                        </Card.Header>
+                        <Accordion.Collapse eventKey="5">
+                            <Card.Body>Hello! I'm another body</Card.Body>
+                        </Accordion.Collapse>
+                        <Card>
+                            <Card.Header>
+                                <Accordion.Toggle as={Button} variant="link" eventKey="6">
+                                    Click me!this will need Location name, distance, address, and image
+                                </Accordion.Toggle>
+                            </Card.Header>
+                            <Accordion.Collapse eventKey="6">
+                                <Card.Body>Hello! I'm another body</Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Card>
                 </Accordion>
             </form>
         </div>

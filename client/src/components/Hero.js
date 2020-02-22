@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, {useState} from 'react'
 import { ButtonGroup, Button, Dropdown, DropdownButton } from "react-bootstrap";
 
 
-function Hero() {
-  return (       
-    <video id="background-video" loop autoPlay muted>
-      <source src="./images/traffic.mp4" type="video/mp4" />
-        
-        Your browser does not support the video tag.
-    </video>
-  )
-}
-export default Hero;
+// this will be our button component
 
+function Hero(props) {
+    // on page load function
+    // on click function
+    // css (check out confirm.js or other components similar examples)
+
+}
+
+export default Hero;
