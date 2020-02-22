@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Accordion, Card } from "react-bootstrap";
 
 function TakeOff(props) {
-    const [userChoice, setuserChoice] = useState("");
+    const [userChoice, setUserChoice] = useState("");
 
     function validateForm() {
         return userChoice.length;
