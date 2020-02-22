@@ -6,7 +6,7 @@ import Login from "components/Login";
 import TakeOff from "components/TakeOff";
 import Confirm from "components/Confirm";
 import Destination from "components/Destination";
-
+import CardInput from "components/CardInput";
 function App() {
   return (
     <div className="App">
@@ -17,6 +17,7 @@ function App() {
         <TakeOff></TakeOff>
         <Confirm></Confirm>
         <Destination></Destination>
+        <CardInput></CardInput>
       </header>
     </div>
   );
