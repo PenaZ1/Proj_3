@@ -6,13 +6,20 @@ const cors = require('cors');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const populateLocationSchema = require('./db/populateLocationSchema');
+const Location = require('./db/Location');
 
 mongoose.connect('mongodb://localhost:27017/CloudCarry', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('error', (error) => {
   // eslint-disable-next-line no-console
   console.log(`Problem connection to the database${error}`);
 });
-populateLocationSchema();
+
+Location.count({}, (err, res) => {
+  if (err) throw err;
+  if (res === 0) {
+    populateLocationSchema();
+  }
+});
 
 const routes = require('./routes');
 const passport = require('./config/passport');

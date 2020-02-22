@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
+const axios = require('axios');
 
 export class MapContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
-      <div style={{height: '400px', width: '400px'}}>
+      <div style={{ height: '400px', width: '400px' }}>
         <Map
-          style={{height: '400px', width: '400px'}}
+          containerStyle={{ height: '400px', width: '400px' }}
+          style={{ height: '400px', width: '400px' }}
           google={this.props.google}
           zoom={16}
           initialCenter={{
-           lat:  34.9611583,
-           lng: -89.8456639
+            lat: 34.9611583,
+            lng: -89.8456639
           }}
         />
-      </div>
+      </div >
     );
   }
 }
