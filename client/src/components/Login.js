@@ -18,7 +18,7 @@ function Login(props) {
         <div className="Login">
             <form onSubmit={handleSubmit}>
                 <FormLabel>Email</FormLabel>
-                <FormGroup controlId="email" bsSize="large">
+                <FormGroup controlId="email">
                     <FormControl
                         autoFocus
                         type="email"
@@ -26,7 +26,7 @@ function Login(props) {
                         onChange={e => setEmail(e.target.value)}
                     />
                 </FormGroup>
-                <FormGroup controlId="password" bsSize="large">
+                <FormGroup controlId="password">
                     <FormLabel>Password</FormLabel>
                     <FormControl
                         value={password}
@@ -34,7 +34,7 @@ function Login(props) {
                         type="password"
                     />
                 </FormGroup>
-                <Button block bsSize="large" disabled={!validateForm()} type="submit">
+                <Button block disabled={!validateForm()} type="submit">
                     Login
                 </Button>
             </form>

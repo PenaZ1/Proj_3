@@ -6,17 +6,21 @@ import Login from "components/Login";
 import TakeOff from "components/TakeOff";
 import Confirm from "components/Confirm";
 import Destination from "components/Destination";
+// import CardInput from "components/CardInput";
+import Hero from "components/Hero";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MapContainer></MapContainer>
+        <Hero></Hero>
+        {/* <MapContainer></MapContainer>
         <Login></Login>
         <Register></Register>
         <TakeOff></TakeOff>
         <Confirm></Confirm>
-        <Destination></Destination>
+        <Destination></Destination> */}
+        {/* <CardInput></CardInput> */}
       </header>
     </div>
   );

@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
-router.get('/', (req, res) => {
-  res.send('asdf');
-});
-
 // API Routes
 router.use('/api/', apiRoutes);
+
+router.get('*', (req, res) => {
+  res.send('404: API route not found.').status(404);
+});
 
 module.exports = router;

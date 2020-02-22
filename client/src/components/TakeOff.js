@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Accordion, Card } from "react-bootstrap";
 
 function TakeOff(props) {
-    const [userChoice, setUserChoice] = useState("");
+    const [userChoice, setuserChoice] = useState("");
 
     function validateForm() {
         return userChoice.length;
@@ -12,7 +12,7 @@ function TakeOff(props) {
         event.preventDefault();
     }
     return (
-        <div classname="Login">
+        <div>
             <form onSubmit={handleSubmit}>
                 <Accordion>
                     <Card>
