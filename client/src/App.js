@@ -20,10 +20,10 @@ function App() {
         <TakeOff></TakeOff>
         <Confirm></Confirm>
         <Destination></Destination>
-        <CardInput></CardInput>
       </header>
     </div>
   );
 }
 
 export default App;
+// separate each page wrapped into other routes - might need subroutes
