@@ -6,7 +6,7 @@ import Login from "components/Login";
 import TakeOff from "components/TakeOff";
 import Confirm from "components/Confirm";
 import Destination from "components/Destination";
-// import CardInput from "components/CardInput";
+import CardInput from "components/CardInput";
 import Hero from "components/Hero";
 
 function App() {
@@ -14,13 +14,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Hero></Hero>
-        {/* <MapContainer></MapContainer>
+        <MapContainer></MapContainer>
         <Login></Login>
         <Register></Register>
         <TakeOff></TakeOff>
         <Confirm></Confirm>
-        <Destination></Destination> */}
-        {/* <CardInput></CardInput> */}
+        <Destination></Destination>
+        <CardInput></CardInput>
       </header>
     </div>
   );
