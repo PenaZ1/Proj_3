@@ -12,7 +12,7 @@ function TakeOff(props) {
         event.preventDefault();
     }
     return (
-        <div classname="Login">
+        <div>
             <form onSubmit={handleSubmit}>
                 <Accordion>
                     <Card>
