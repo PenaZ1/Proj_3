@@ -8,12 +8,14 @@ import Confirm from "components/Confirm";
 import Destination from "components/Destination";
 import CardInput from "components/CardInput";
 import Hero from "components/Hero";
+import EnterBtn from "components/EnterBtn";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Hero></Hero>
+        {/* <Hero></Hero> */}
+        <EnterBtn></EnterBtn>
         <MapContainer></MapContainer>
         <Login></Login>
         <Register></Register>
