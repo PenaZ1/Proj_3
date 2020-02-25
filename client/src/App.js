@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './styles/hero.css';
 import Register from "components/Register";
 import MapContainer from "components/MapContainer"
 import Login from "components/Login";
@@ -14,14 +15,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Hero></Hero> */}
-        <EnterBtn></EnterBtn>
-        <MapContainer></MapContainer>
+      <EnterBtn></EnterBtn>
+        <Hero></Hero>
+        {/* <EnterBtn></EnterBtn> */}
+        {/* <MapContainer></MapContainer>
         <Login></Login>
         <Register></Register>
         <TakeOff></TakeOff>
         <Confirm></Confirm>
-        <Destination></Destination>
+        <Destination></Destination> */}
       </header>
     </div>
   );
