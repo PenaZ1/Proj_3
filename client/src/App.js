@@ -16,6 +16,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Home = () => {
   return (<>
+
     <Hero></Hero>
     <EnterBtn></EnterBtn>
   </>);
