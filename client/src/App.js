@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './styles/hero.css';
 import Register from "components/Register";
 import MapContainer from "components/MapContainer"
 import Login from "components/Login";
@@ -15,6 +16,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => {
   return (
+
     <Router>
       <div classname="App">
         {/* <Navbar> needs to be created with login, logout and about
@@ -45,18 +47,12 @@ const App = () => {
       </div>
     </Router>
   )
-}
-
-export default App;
-// separate each page wrapped into other routes - might need subroutes
-
-// function App() {
-//   return (
 //     <div className="App">
 //       <header className="App-header">
-//         {/* <Hero></Hero> */}
-//         <EnterBtn></EnterBtn>
-//         <MapContainer></MapContainer>
+//       <EnterBtn></EnterBtn>
+//         <Hero></Hero>
+//       <EnterBtn></EnterBtn>
+//       <MapContainer></MapContainer>
 //         <Login></Login>
 //         <Register></Register>
 //         <TakeOff></TakeOff>
@@ -65,4 +61,7 @@ export default App;
 //       </header>
 //     </div>
 //   );
-// }
+
+}
+
+export default App;
