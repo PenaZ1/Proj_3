@@ -7,3 +7,6 @@
         max-width: 320px;
     }
 }
+.Login{
+    z-index: 100;
+}

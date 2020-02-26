@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
-//import "./Login.css";
+import Hero from "./Hero";
+import '../styles/hero.css';
+import '../App.css';
+import "../styles/Login.css";
 
 function Login(props) {
     const [email, setEmail] = useState("");
@@ -14,7 +17,12 @@ function Login(props) {
         event.preventDefault();
     }
 
+    function handleRegister(){
+        window.location.href = "register";
+    }
+
     return (
+        <>
         <div className="Login">
             <form onSubmit={handleSubmit}>
                 <FormLabel>Email</FormLabel>
@@ -37,8 +45,11 @@ function Login(props) {
                 <Button block disabled={!validateForm()} type="submit">
                     Login
                 </Button>
+                <Button onClick={handleRegister}>Register</Button>
             </form>
         </div>
+        <Hero></Hero>
+        </>
     );
 }
 
