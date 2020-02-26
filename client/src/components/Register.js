@@ -8,14 +8,19 @@ import Hero from "./Hero"
 function Register(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [res, setRes] = useState('');
 
     async function signUp(e) {
         e.preventDefault();
-        let res = await axios.post('/api/register', {
+        let resT = await axios.post('/api/register', {
             email: email,
             password: password
         })
-        console.log(res.data);
+        if (!'error' in resT.data){
+            window.location.href="/login";
+        }else{
+            setRes(resT.data.error);
+        }
     };
 
     return(
@@ -26,7 +31,8 @@ function Register(){
                   Email: <br/><input onChange={event => setEmail(event.target.value)}></input> <br/>
                   Password: <br/><input onChange={event => setPassword(event.target.value)}></input><br/>
                   Terms and Conditions: <input type="checkbox"></input> <br/>
-                  <Button onClick={signUp}>Sign up</Button>
+                  <Button onClick={signUp}>Sign up</Button> <br/>
+                  <span>{res}</span>
               </form>
           </div>
           <Hero></Hero>
