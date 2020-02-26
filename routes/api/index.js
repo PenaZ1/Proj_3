@@ -1,7 +1,18 @@
 const router = require('express').Router();
-const authRoutes = require('./auth');
 const User = require('../../db/User');
 const Location = require('../../db/Location');
+const passport = require('./passport.js');
+
+
+router.post('/login', passport.authenticate('local'), (req, res) => {
+  return res.status(200).json({
+    url: '/map',
+    session: {
+      email: req.user.dataValues.id,
+      password: req.user.dataValues.password,
+    }
+  });
+});
 
 router.post('/register', (req, res) => {
   if (!('email' in req.body)) {
@@ -24,6 +35,7 @@ router.post('/register', (req, res) => {
     if (err) throw err;
     res.end();
   });
+  return 0;
 });
 
 // Distance checking and relevant locations will be done here
@@ -32,7 +44,5 @@ router.get('/locations', async (req, res) => {
   const locations = await Location.find({}).limit(5);
   res.json(locations);
 });
-
-router.use('/auth', authRoutes);
 
 module.exports = router;

@@ -25,6 +25,7 @@ function Login(props) {
         <>
         <div className="Login">
             <form onSubmit={handleSubmit}>
+                <h2>Cloud Carry</h2> <br />
                 <FormLabel>Email</FormLabel>
                 <FormGroup controlId="email">
                     <FormControl
