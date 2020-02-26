@@ -14,54 +14,30 @@ import TakeOffPage from "./pages/TakeOffPage";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+const Home = () => {
+  return (<>
+    <Hero></Hero>
+    <EnterBtn></EnterBtn>
+  </>);
+}
+
 const App = () => {
   return (
-
-    <Router>
-      <div classname="App">
-        {/* <Navbar> needs to be created with login, logout and about
-        </Navbar> */}
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/users">Register</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <Switch>
-          <Route exact path="/" component={Hero} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/takeoff" component={TakeOffPage} />
-
-
-        </Switch>
-      </div>
-    </Router>
+    <div classname="App">
+      <Router>
+          {/* <Navbar> needs to be created with login, logout and about
+          </Navbar> */}
+         <header className="App-header">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/takeoff" component={TakeOffPage} />
+            </Switch>
+          </header>
+      </Router>
+    </div>
   )
-//     <div className="App">
-//       <header className="App-header">
-//       <EnterBtn></EnterBtn>
-//         <Hero></Hero>
-//       <EnterBtn></EnterBtn>
-//       <MapContainer></MapContainer>
-//         <Login></Login>
-//         <Register></Register>
-//         <TakeOff></TakeOff>
-//         <Confirm></Confirm>
-//         <Destination></Destination>
-//       </header>
-//     </div>
-//   );
-
 }
 
 export default App;

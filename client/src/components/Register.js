@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { AST_DefClass } from "terser";
+import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 
 function Register(){
     const [email, setEmail] = useState('');
