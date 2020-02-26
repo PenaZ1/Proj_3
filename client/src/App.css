@@ -4,7 +4,7 @@ html {
 
 .App {
   text-align: center;
-  background-color: black;
+  background-color: black
 }
 
 .App-logo {
@@ -40,4 +40,7 @@ html {
     transform: rotate(360deg);
   }
 }
-
+.navbar-brand-custom {
+  width: 100%;
+  text-align: center;
+}
