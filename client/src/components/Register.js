@@ -16,7 +16,8 @@ function Register(){
             email: email,
             password: password
         })
-        if (!'error' in resT.data){
+        console.log(resT)
+        if (!resT.data.hasOwnProperty('error')){
             window.location.href="/login";
         }else{
             setRes(resT.data.error);
@@ -31,8 +32,8 @@ function Register(){
                   Email: <br/><input onChange={event => setEmail(event.target.value)}></input> <br/>
                   Password: <br/><input onChange={event => setPassword(event.target.value)}></input><br/>
                   Terms and Conditions: <input type="checkbox"></input> <br/>
+                  <span id="error">{res}</span> <br/>
                   <Button onClick={signUp}>Sign up</Button> <br/>
-                  <span>{res}</span>
               </form>
           </div>
           <Hero></Hero>

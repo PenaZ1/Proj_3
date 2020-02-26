@@ -4,16 +4,25 @@ const User = require('../../db/User');
 const Location = require('../../db/Location');
 
 router.post('/register', (req, res) => {
-  if (!req.email.includes('@') || !req.email.includes('.')) {
-    res.json({ error: 'Invalid email address' });
+  if (!('email' in req.body)) {
+    res.json({ error: 'Must use an email adress.' });
     return 0;
   }
-  if (req.body.length < 6) {
-    res.json({ error: 'Password must be at least 6 characters' });
+  if (!req.body.email.includes('@') || !req.body.email.includes('.')) {
+    res.json({ error: 'Invalid email address.' });
+    return 0;
+  }
+  if (!('password' in req.body)) {
+    res.json({ error: 'Must provide a password.' });
+    return 0;
+  }
+  if (req.body.password.length < 6) {
+    res.json({ error: 'Password must be at least 6 characters.' });
     return 0;
   }
   User.create(req.body, (err) => {
     if (err) throw err;
+    res.end();
   });
 });
 
