@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import "../styles/hero.css"
 
 function Hero() {
-  return (       
+  return (
     <video id="background-video" loop autoPlay muted>
       <source src="./images/clouds.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+      Your browser does not support the video tag.
     </video>
   )
 }

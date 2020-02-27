@@ -17,39 +17,39 @@ function Login(props) {
         event.preventDefault();
     }
 
-    function handleRegister(){
+    function handleRegister() {
         window.location.href = "register";
     }
 
     return (
         <>
-        <div className="Login">
-            <form onSubmit={handleSubmit}>
-                <h2>Cloud Carry</h2> <br />
-                <FormLabel>Email</FormLabel>
-                <FormGroup controlId="email">
-                    <FormControl
-                        autoFocus
-                        type="email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
-                </FormGroup>
-                <FormGroup controlId="password">
-                    <FormLabel>Password</FormLabel>
-                    <FormControl
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        type="password"
-                    />
-                </FormGroup>
-                <Button block disabled={!validateForm()} type="submit">
-                    Login
+            <div className="Login">
+                <form onSubmit={handleSubmit}>
+                    <h2>Cloud Carry</h2> <br />
+                    <FormLabel>Email</FormLabel>
+                    <FormGroup controlId="email">
+                        <FormControl
+                            autoFocus
+                            type="email"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                    </FormGroup>
+                    <FormGroup controlId="password">
+                        <FormLabel>Password</FormLabel>
+                        <FormControl
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            type="password"
+                        />
+                    </FormGroup>
+                    <Button block disabled={!validateForm()} type="submit">
+                        Login
                 </Button>
-                <Button onClick={handleRegister}>Register</Button>
-            </form>
-        </div>
-        <Hero></Hero>
+                    <Button onClick={handleRegister}>Register</Button>
+                </form>
+            </div>
+            <Hero></Hero>
         </>
     );
 }

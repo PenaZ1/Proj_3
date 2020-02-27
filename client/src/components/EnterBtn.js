@@ -2,22 +2,17 @@ import React, { useState, Component } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "../styles/EnterBtn.css"
 class EnterBtn extends Component {
-    constructor(props) {
-        super(props) 
-
-            this.state = {
-                message: "Hi!"
-            }
-        }
-    handleClick(){
-        window.location.href="login";
+    handleClick() {
+        window.location.href = "login";
     }
-    
     render() {
+        const btnStyle = {
+            margin: "auto",
+        };
         return (
+
             <div id="EnterBtn">
-                <span>{this.state.message}</span> <br/>
-                <Button onClick={this.handleClick}>Enter</Button>
+                <Button style={{ btnStyle }} onClick={this.handleClick}>Welcome</Button>
             </div>
         )
 
