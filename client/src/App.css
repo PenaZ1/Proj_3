@@ -1,10 +1,9 @@
-html {
-  background-color: black;
+body {
+  background-color: darkblue;
 }
 
 .App {
   text-align: center;
-  background-color: black;
 }
 
 .App-logo {
@@ -15,7 +14,7 @@ html {
 
 .App-header {
   /* background-color: #282c34; */
-  background-image: url(images/orangeCity.jpeg);
+  /* background-image: url(images/orangeCity.jpeg); */
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
@@ -25,7 +24,7 @@ html {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -40,14 +39,7 @@ html {
     transform: rotate(360deg);
   }
 }
-
-#background-video {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  /* width: 100vw; */
-  height: 100vh;
-  /* overflow: hidden; */
-  margin-bottom: 0;
-  overflow-y: hidden
+.navbar-brand-custom {
+  width: 100%;
+  text-align: center;
 }

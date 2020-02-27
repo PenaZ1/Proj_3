@@ -59,6 +59,7 @@
   "dependencies": {
     "airmap-map-sdk": "^2.4.0",
     "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
@@ -70,6 +71,7 @@
     "passport-local": "^1.0.0",
     "passport-session": "^1.0.2",
     "react-bootstrap": "^1.0.0-beta.16",
-    "react-credit-cards": "^0.8.0"
+    "react-credit-cards": "^0.8.0",
+    "react-router-dom": "^5.1.2"
   }
 }
