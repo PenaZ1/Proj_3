@@ -19,12 +19,18 @@
         var APIKey = "Xcdh1iJpNCuoO3BkwTNNeMGBzadydL4z";
 
         // Here we are building the URL we need to query the database
-        var queryURL = "https://api.climacell.co/v3/weather/nowcast?lat=34.9611583&lon=-89.8456639&timestep=5&unit_system=si&fields=precipitation&start_time=now" + APIKey;
+        var queryURL = "https://api.climacell.co/v3/weather/nowcast?lat=34.9611583&lon=-89.8456639&timestep=5&unit_system=us&fields=precipitation,temp:F,cloud_cover,wind_speed:mph,visibility:mi,precipitation_type&start_time=now";
+
+        // var queryURL = "https://api.climacell.co/v3/locations?";
 
 
         $.ajax({
             url: queryURL,
-            method: "GET"
+            method: "GET",
+            headers: {
+                "Content-Type": "application/JSON",
+                apikey: APIKey
+            }
         })
             // We store all of the retrieved data inside of an object called "response"
             .then(function (response) {
@@ -44,7 +50,7 @@
                 // Log the data in the console as well
                 console.log("Wind Speed: " + response.wind.speed);
                 console.log("Humidity: " + response.main.humidity);
-                console.log("Temperature (F): " + response.main.temp);
+                console.log("Temperature (F): " + response.temp);
             });
     </script>
 </body>
