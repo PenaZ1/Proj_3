@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 const axios = require('axios');
 
 export class MapContainer extends Component {
   constructor(props){
     super(props);
-
-    this.state = {};
+    this.state = {locations: []};
   }
 
   render() {
+    axios.get('/api/locations').then((res) => {
+      this.state = {locations: res.data}
+    }).catch((err) => {
+        if (err) throw err
+    });
+
     return (
-      <div style={{ height: '400px', width: '400px' }}>
+      <div style={{ height: '553.25px', width: '553.25px' }}>
         <Map
-          containerStyle={{ height: '400px', width: '400px' }}
-          style={{ height: '400px', width: '400px' }}
+          containerStyle={{ height: '553.25px', width: '553.25px' }}
           google={this.props.google}
           zoom={16}
           initialCenter={{
             lat: 34.9611583,
             lng: -89.8456639
           }}
-        />
+        >
+          {this.state.locations.map((key, index)=>{
+                            console.log("adf")
+            return(
+                <Marker
+                name = {this.state.locations[index].name}
+                position={{lat: this.state.locations[index].lat, lng: this.state.locations[index].lng}}
+                />
+              );
+            })
+          }
+        </Map>
       </div >
     );
   }
