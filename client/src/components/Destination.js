@@ -26,7 +26,7 @@ function Destination(props) {
         <div className="Destination">
             <form onSubmit={handleSubmit}>
                 <Accordion>
-                    {locations.map((name, index) => {
+                    {locations.map((key, index) => {
                         return (
                             <Card>
                                 <Card.Header>
