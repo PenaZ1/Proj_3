@@ -18,7 +18,7 @@ const Home = () => {
 
 const App = () => {
   return (
-    <div classname="App">
+    <div className="App">
       <Router>
           {/* <Navbar> needs to be created with login, logout and about
           </Navbar> */}

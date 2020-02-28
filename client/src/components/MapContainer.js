@@ -5,6 +5,7 @@ const axios = require('axios');
 export class MapContainer extends Component {
   constructor(props){
     super(props);
+
     this.state = {};
   }
 
