@@ -67,7 +67,6 @@
     "helmet": "^3.21.2",
     "if-env": "^1.0.4",
     "mongoose": "^5.8.11",
-    "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-session": "^1.0.2",
     "react-bootstrap": "^1.0.0-beta.16",

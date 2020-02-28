@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => {
   return (
-    <div classname="App">
+    <div className="App">
       <Router>
         {/* <Navbar> needs to be created with login, logout and about
           </Navbar> */}
