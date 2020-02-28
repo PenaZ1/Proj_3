@@ -12,14 +12,17 @@ function Login(props) {
     const [res, setRes] = useState("");
 
     // Automatically log user in if email and password are present in localStorage
-    if (localStorage.getItem('email') != null && localStorage.getItem('password') != null) {
+    if (localStorage.getItem('email').length > 0 && localStorage.getItem('password').length > 0) {
         axios.post('/api/login', {
             email: localStorage.getItem('email'),
             password: localStorage.getItem('password')
         }).then((res) => {
             if (!('error' in res.data)) {
                 window.location.href = res.data.url;
-            }   
+            } else {
+                localStorage.setItem('email','');
+                localStorage.setItem('password','')
+            }
         });
     }
 

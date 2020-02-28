@@ -38,14 +38,6 @@ router.post('/register', (req, res) => {
   return 0;
 });
 
-router.get('/loggedin', async (req, res) => {
-  if (req.session.loggedin) {
-    res.send(`Welcome back, ${req.session.email}!`);
-  } else {
-    res.send('Please login to view this page!');
-  }
-});
-
 // Distance checking and relevant locations will be done here
 router.get('/locations', async (req, res) => {
   // This will temporarily send the first five results from the db
