@@ -11,10 +11,9 @@ export class MapContainer extends Component {
 
   render() {
     return (
-      <div style={{ height: '400px', width: '400px' }}>
+      <div style={{ height: '553.25px', width: '553.25px' }}>
         <Map
-          containerStyle={{ height: '400px', width: '400px' }}
-          style={{ height: '400px', width: '400px' }}
+          containerStyle={{ height: '553.25px', width: '553.25px' }}
           google={this.props.google}
           zoom={16}
           initialCenter={{
