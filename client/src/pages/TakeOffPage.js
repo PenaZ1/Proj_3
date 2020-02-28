@@ -2,6 +2,7 @@ import React from "react";
 
 import Destination from "../components/Destination";
 import MapContainer from "../components/MapContainer";
+import Navigation from "../components/Navigation";
 
 const axios = require('axios');
 
@@ -15,6 +16,7 @@ const TakeOffPage = () => {
     testLogin();
     return (
         <div>
+            <Navigation />
             <MapContainer />
             <Destination />
         </div>

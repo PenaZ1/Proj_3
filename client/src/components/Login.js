@@ -43,7 +43,7 @@ function Login(props) {
         }
     }
 
-    function handleRegister(){
+    function handleRegister() {
         window.location.href = "register";
     }
 
@@ -73,10 +73,10 @@ function Login(props) {
                 <Button block disabled={!validateForm()} type="submit">
                     Login
                 </Button>
-                <Button onClick={handleRegister}>Register</Button>
-            </form>
-        </div>
-        <Hero></Hero>
+                    <Button onClick={handleRegister}>Register</Button>
+                </form>
+            </div>
+            <Hero></Hero>
         </>
     );
 }
