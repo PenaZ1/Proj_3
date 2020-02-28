@@ -57,7 +57,6 @@ function Login(props) {
 
     return (
         <>
-
             <div className="Login">
                 <form onSubmit={handleSubmit}>
                     <h2 id="cloudTitle"><b>Cloud</b>Carry</h2> <br />
