@@ -8,7 +8,9 @@ import DestinationPage from "./pages/DestinationPage";
 import TakeOffPage from "./pages/TakeOffPage";
 import HomePage from "./pages/HomePage";
 import EnjoyPage from "./pages/EnjoyPage";
+
 import ConfirmPage from "./pages/ConfirmPage";
+
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -25,6 +27,7 @@ const App = () => {
             <Route exact path="/destination" component={DestinationPage} />
             <Route exact path="/enjoy" component={EnjoyPage} />
             <Route exact path="/confirm" component={ConfirmPage} />
+
           </Switch>
         </header>
       </Router>

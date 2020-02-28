@@ -5,29 +5,25 @@ const axios = require('axios');
 export class MapContainer extends Component {
   constructor(props){
     super(props);
-    this.state = {locations: [], locationSelect: 0};
+    this.state = {locations: []};
     axios.get('/api/locations').then((res) => {
       this.setState({locations: res.data})
     }).catch((err) => {
-        if (err) throw err
+        if (err) throw err;
     });
-
   }
 
   render() {
+    console.log(this.props)
     return (
       <div style={{ height: '553.25px', width: '553.25px' }}>
         <Map
           containerStyle={{ height: '553.25px', width: '553.25px' }}
           google={this.props.google}
           zoom={16}
-          initialCenter={{
-            lat: 34.9611583,
-            lng: -89.8456639
-          }}
+          center={this.props.center}
         >
           {this.state.locations.map((key, index)=>{
-            console.log("adf")
             return(
                 <Marker
                 name = {this.state.locations[index].name}
