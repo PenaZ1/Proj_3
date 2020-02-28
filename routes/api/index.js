@@ -14,7 +14,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/register', (req, res) => {
+router.post('/register', async (req, res) => {
   if (!('email' in req.body)) {
     res.json({ error: 'Must use an email adress.' });
     return 0;
@@ -29,6 +29,10 @@ router.post('/register', (req, res) => {
   }
   if (req.body.password.length < 6) {
     res.json({ error: 'Password must be at least 6 characters.' });
+    return 0;
+  }
+  if (await User.findOne({email: req.body.email}) != null) {
+    res.json({ error: 'A user with that email already exists.' });
     return 0;
   }
   User.create(req.body, (err) => {
