@@ -19,6 +19,11 @@ function Navigation(props) {
     }
 
     useEffect(() => {
+        if (localStorage.getItem('email') === null || localStorage.getItem('password')){
+            localStorage.setItem('email','');
+            localStorage.setItem('password','');
+        }
+        
         if (localStorage.getItem('email').length > 0 && localStorage.getItem('password').length > 0){
             setLoggedIn(true);
         }else{
