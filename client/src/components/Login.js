@@ -11,7 +11,7 @@ function Login(props) {
     const [password, setPassword] = useState("");
     const [res, setRes] = useState("");
 
-    if (localStorage.getItem('email') === null || localStorage.getItem('password') === null){
+    if (localStorage.getItem('email') === null || localStorage.getItem('password')){
         localStorage.setItem('email','');
         localStorage.setItem('password','');
     }

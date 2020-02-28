@@ -10,6 +10,7 @@ const LoginPage = () => {
     return (
         <div classname="LoginPage">
             <Hero />
+            <Navigation />
             <Login />
         </div>
     )
