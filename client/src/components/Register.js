@@ -3,7 +3,9 @@ import axios from "axios";
 import { AST_DefClass } from "terser";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "../styles/Register.css"
+import "../App.css"
 import Hero from "./Hero"
+
 
 function Register() {
     const [email, setEmail] = useState('');
@@ -26,9 +28,11 @@ function Register() {
 
     return (
         <>
+
             <div className="Login">
                 <form>
-                    <h2>Cloud Carry</h2> <br />
+                    <h2 id="cloudTitle"><b>Cloud</b>Carry</h2> <br />
+
                     <FormLabel>Email:</FormLabel>
                     <FormGroup controlId="email">
                         <FormControl

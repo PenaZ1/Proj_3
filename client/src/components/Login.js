@@ -41,12 +41,12 @@ function Login(props) {
             email: email,
             password: password
         })
-        if ('error' in resT.data){
+        if ('error' in resT.data) {
             setRes(resT.data.error);
-        }else {
+        } else {
             setRes('');
-            localStorage.setItem('email',resT.data.email);
-            localStorage.setItem('password',resT.data.password);
+            localStorage.setItem('email', resT.data.email);
+            localStorage.setItem('password', resT.data.password);
             window.location.href = resT.data.url;
         }
     }
@@ -57,29 +57,30 @@ function Login(props) {
 
     return (
         <>
-        <div className="Login">
-            <form onSubmit={handleSubmit}>
-                <h2>Cloud Carry</h2> <br />
-                <FormLabel>Email</FormLabel>
-                <FormGroup controlId="email">
-                    <FormControl
-                        autoFocus
-                        type="email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
-                </FormGroup>
-                <FormGroup controlId="password">
-                    <FormLabel>Password</FormLabel>
-                    <FormControl
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        type="password"
-                    />
-                </FormGroup>
-                <span id="error">{res}</span> <br/>
-                <Button block disabled={!validateForm()} type="submit">
-                    Login
+
+            <div className="Login">
+                <form onSubmit={handleSubmit}>
+                    <h2 id="cloudTitle"><b>Cloud</b>Carry</h2> <br />
+                    <FormLabel>Email</FormLabel>
+                    <FormGroup controlId="email">
+                        <FormControl
+                            autoFocus
+                            type="email"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                    </FormGroup>
+                    <FormGroup controlId="password">
+                        <FormLabel>Password</FormLabel>
+                        <FormControl
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            type="password"
+                        />
+                    </FormGroup>
+                    <span id="error">{res}</span> <br />
+                    <Button block disabled={!validateForm()} type="submit">
+                        Login
                 </Button>
                     <Button onClick={handleRegister}>Register</Button>
                 </form>
