@@ -5,16 +5,16 @@ const axios = require('axios');
 export class MapContainer extends Component {
   constructor(props){
     super(props);
-    this.state = {locations: []};
-  }
-
-  render() {
+    this.state = {locations: [], locationSelect: 0};
     axios.get('/api/locations').then((res) => {
-      this.state = {locations: res.data}
+      this.setState({locations: res.data})
     }).catch((err) => {
         if (err) throw err
     });
 
+  }
+
+  render() {
     return (
       <div style={{ height: '553.25px', width: '553.25px' }}>
         <Map
@@ -27,7 +27,7 @@ export class MapContainer extends Component {
           }}
         >
           {this.state.locations.map((key, index)=>{
-                            console.log("adf")
+            console.log("adf")
             return(
                 <Marker
                 name = {this.state.locations[index].name}
