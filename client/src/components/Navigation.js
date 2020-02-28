@@ -19,7 +19,7 @@ function Navigation(props) {
     }
 
     useEffect(() => {
-        if (localStorage.getItem('email') === null || localStorage.getItem('password')){
+        if (localStorage.getItem('email') === null || localStorage.getItem('password') === null){
             localStorage.setItem('email','');
             localStorage.setItem('password','');
         }
