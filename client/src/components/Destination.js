@@ -34,9 +34,6 @@ function Destination(props) {
                                         {locations[index].name}
                                     </Accordion.Toggle>
                                 </Card.Header>
-                                <Accordion.Collapse eventKey="0">
-                                    <Card.Body>Hello! I'm the body</Card.Body>
-                                </Accordion.Collapse>
                             </Card>
                         )
                     })}
