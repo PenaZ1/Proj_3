@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const populateLocationSchema = require('./db/populateLocationSchema');
 const Location = require('./db/Location');
 
-mongoose.connect('mongodb://localhost:27017/CloudCarry', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://root:password1@ds139327.mlab.com:39327/heroku_fkz46j96', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('error', (error) => {
   // eslint-disable-next-line no-console
   console.log(`Problem connection to the database${error}`);
