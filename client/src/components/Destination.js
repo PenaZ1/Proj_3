@@ -23,7 +23,7 @@ function Destination(props) {
     }
 
     return (
-        <div>
+        <div className="Destination">
             <form onSubmit={handleSubmit}>
                 <Accordion>
                     {locations.map((name, index) => {

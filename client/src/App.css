@@ -47,3 +47,28 @@ body {
 h2 {
   font-family: 'Poiret One';
 }
+
+.btn-primary {
+  background-color: gold;
+  border-color: #ffd600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-primary:focus {
+  background-color: darkgoldenrod;
+  }
+
+.btn-primary:hover {
+  background-color: goldenrod;
+  border-color: goldenrod;
+}
+
+.btn-primary:global(.active) {
+  background-color: rgb(255, 217, 0);
+  border-color: rgb(255, 217, 0);
+}
+
+.btn-primary:disabled {
+  background-color: #f9a602;
+  border-color: #ffd600;
+}
