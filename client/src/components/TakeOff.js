@@ -30,7 +30,8 @@ function TakeOff(props) {
                         return (
                             <Card>
                                 <Card.Header>
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={index}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={index}
+                                    onClick = {() => {props.handleLocClick(locations[index].lat,locations[index].lng)}}>
                                         {locations[index].name}
                                     </Accordion.Toggle>
                                 </Card.Header>
