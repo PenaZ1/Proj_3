@@ -5,7 +5,7 @@ import "../App.css"
 
 class EnterBtn extends Component {
     handleClick() {
-        window.location.href = "login";
+        window.location.href = "/login";
     }
     render() {
         const btnStyle = {
