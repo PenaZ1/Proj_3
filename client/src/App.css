@@ -55,12 +55,12 @@ h2 {
 }
 
 .btn-primary:focus {
-  background-color: darkgoldenrod;
+  background-color: #f9a602;
   }
 
 .btn-primary:hover {
-  background-color: goldenrod;
-  border-color: goldenrod;
+  background-color: rgb(0, 247, 255);
+  border-color: rgb(0, 233, 241);
 }
 
 .btn-primary:global(.active) {
