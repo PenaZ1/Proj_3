@@ -5,7 +5,7 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "../styles/Register.css"
 import Hero from "./Hero"
 
-function Register(){
+function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [res, setRes] = useState('');
@@ -17,26 +17,43 @@ function Register(){
             password: password
         })
         console.log(resT)
-        if (!resT.data.hasOwnProperty('error')){
-            window.location.href="/login";
-        }else{
+        if (!resT.data.hasOwnProperty('error')) {
+            window.location.href = "/login";
+        } else {
             setRes(resT.data.error);
         }
     };
 
-    return(
+    return (
         <>
-          <div id="Register">
-              <h2>Register</h2>
-              <form>
-                  Email: <br/><input onChange={event => setEmail(event.target.value)}></input> <br/>
-                  Password: <br/><input onChange={event => setPassword(event.target.value)}></input><br/>
-                  Terms and Conditions: <input type="checkbox"></input> <br/>
-                  <span id="error">{res}</span> <br/>
-                  <Button onClick={signUp}>Sign up</Button> <br/>
-              </form>
-          </div>
-          <Hero></Hero>
+            <div className="Login">
+                <form>
+                    <h2>Cloud Carry</h2> <br />
+                    <FormLabel>Email:</FormLabel>
+                    <FormGroup controlId="email">
+                        <FormControl
+                            autoFocus
+                            type="email"
+                            value={email}
+                            onChange={event => setEmail(event.target.value)}
+                        />
+                    </FormGroup>
+                    <FormGroup controlId="password">
+                        <FormLabel>Password</FormLabel>
+                        <FormControl
+                            value={password}
+                            onChange={event => setPassword(event.target.value)}
+                            type="password"
+                        />
+                    </FormGroup>
+                    <span id="error">{res}</span> <br />
+                    <Button onClick={signUp} type="submit">
+                        Sign Up!
+        </Button>
+
+                </form>
+            </div>
+            <Hero></Hero>
         </>
     );
 }
