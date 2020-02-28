@@ -13,15 +13,6 @@ class Enjoy extends Component {
         };
         return (
             <>
-                <style type="text/css">
-                    {`
-                .btn-primary {
-                background-color: gold;
-                border-color: #ffd600;
-
-            }
-            `}
-                </style>
                 <h2 id="cloudTitle"><b>Happy</b> TakeOff</h2> <br />
                 <div id="EnterBtn">
                     <Button size="lg" style={{ btnStyle }} onClick={this.handleClick}>Back to Start</Button>

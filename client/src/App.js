@@ -8,22 +8,14 @@ import DestinationPage from "./pages/DestinationPage";
 import TakeOffPage from "./pages/TakeOffPage";
 import HomePage from "./pages/HomePage";
 import EnjoyPage from "./pages/EnjoyPage";
+import ConfirmPage from "./pages/ConfirmPage";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-// const Home = () => {
-//   return (<>
-//     <Hero></Hero>
-//     <EnterBtn></EnterBtn>
-//   </>);
-// }
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        {/* <Navbar> needs to be created with login, logout and about
-          </Navbar> */}
         <header className="App-header">
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -32,6 +24,7 @@ const App = () => {
             <Route exact path="/takeoff" component={TakeOffPage} />
             <Route exact path="/destination" component={DestinationPage} />
             <Route exact path="/enjoy" component={EnjoyPage} />
+            <Route exact path="/confirm" component={ConfirmPage} />
           </Switch>
         </header>
       </Router>
