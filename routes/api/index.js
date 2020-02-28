@@ -1,17 +1,17 @@
 const router = require('express').Router();
 const User = require('../../db/User');
 const Location = require('../../db/Location');
-const passport = require('./passport.js');
 
-
-router.post('/login', passport.authenticate('local'), (req, res) => {
-  return res.status(200).json({
-    url: '/map',
-    session: {
-      email: req.user.dataValues.id,
-      password: req.user.dataValues.password,
-    }
-  });
+router.post('/login', async (req, res) => {
+  if (await User.findOne({ email: req.body.email, password: req.body.password }) != null) {
+    res.json({
+      url: '/takeoff',
+      email: req.body.email,
+      password: req.body.password,
+    });
+  } else {
+    res.json({ error: 'Invalid username or password.' });
+  }
 });
 
 router.post('/register', (req, res) => {
@@ -36,6 +36,14 @@ router.post('/register', (req, res) => {
     res.end();
   });
   return 0;
+});
+
+router.get('/loggedin', async (req, res) => {
+  if (req.session.loggedin) {
+    res.send(`Welcome back, ${req.session.email}!`);
+  } else {
+    res.send('Please login to view this page!');
+  }
 });
 
 // Distance checking and relevant locations will be done here
