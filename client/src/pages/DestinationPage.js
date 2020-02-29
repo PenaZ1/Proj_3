@@ -4,7 +4,7 @@ import { useAppContext } from "../appReducer";
 import Destination from "components/Destination";
 import MapContainer from "../components/MapContainer";
 import Navigation from "components/Navigation";
-
+import '../App.css';
 
 
 

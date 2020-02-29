@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { ButtonGroup, Button, Dropdown, DropdownButton, Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useAppContext } from "../appReducer";
+import '../App.css';
 
 const Confirm = () => {
     //pull in state and dispatch from context to use to calculate distance between takeoff and destination

@@ -4,7 +4,7 @@ import { useAppContext } from "../appReducer";
 import MapContainer from "../components/MapContainer";
 import Navigation from "../components/Navigation";
 import TakeOff from "../components/TakeOff";
-
+import '../App.css';
 
 const TakeOffPage = (props) => {
     const { state, dispatch } = useAppContext();

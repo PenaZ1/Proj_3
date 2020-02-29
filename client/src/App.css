@@ -1,5 +1,5 @@
 body {
-  background-color: darkblue;
+  background-color: rgb(156, 156, 156);
 }
 
 .App {
@@ -48,7 +48,7 @@ h2 {
   font-family: 'Poiret One';
 }
 
-.btn-primary {
+.btn-primary, .btn-secondary {
   background-color: gold;
   border-color: #ffd600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -72,3 +72,7 @@ h2 {
   background-color: #f9a602;
   border-color: #ffd600;
 }
+
+/* .ListGroup {
+  background-color: chartreuse;
+} */

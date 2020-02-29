@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Accordion, Card } from "react-bootstrap";
+import '../App.css';
 const axios = require('axios');
 
 function Destination(props) {

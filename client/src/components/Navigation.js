@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, justify } from "react-bootstrap";
+import '../App.css';
 
 function Navigation(props) {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -47,7 +48,7 @@ function Navigation(props) {
     }
 
     return (
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="warning" variant="dark">
             <Navbar.Brand className="navbar-brand-custom">CloudCarry</Navbar.Brand>
             <Nav className="mr-auto" >
                 <NavLinks />
