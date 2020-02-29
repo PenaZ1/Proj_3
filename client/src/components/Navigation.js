@@ -3,46 +3,46 @@ import { Navbar, Nav, justify } from "react-bootstrap";
 
 function Navigation(props) {
     const [loggedIn, setLoggedIn] = useState(false);
-    
-    function handleLogout(){
-        localStorage.setItem('email','');
-        localStorage.setItem('password','');
+
+    function handleLogout() {
+        localStorage.setItem('email', '');
+        localStorage.setItem('password', '');
         window.location.href = "/";
     }
 
-    function handleLogin(){
+    function handleLogin() {
         window.location.href = '/login';
     }
 
-    function handleRegister(){
+    function handleRegister() {
         window.location.href = '/register';
     }
 
     useEffect(() => {
-        if (localStorage.getItem('email') === null || localStorage.getItem('password') === null){
-            localStorage.setItem('email','');
-            localStorage.setItem('password','');
+        if (localStorage.getItem('email') === null || localStorage.getItem('password') === null) {
+            localStorage.setItem('email', '');
+            localStorage.setItem('password', '');
         }
-        
-        if (localStorage.getItem('email').length > 0 && localStorage.getItem('password').length > 0){
+
+        if (localStorage.getItem('email').length > 0 && localStorage.getItem('password').length > 0) {
             setLoggedIn(true);
-        }else{
+        } else {
             setLoggedIn(false);
         }
-    });
+    }, []);
 
-    function NavLinks(){
-        if (loggedIn){
+    function NavLinks() {
+        if (loggedIn) {
             return (
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
             );
-        }else{
+        } else {
             return (
                 <>
                     <Nav.Link onClick={handleLogin}>Login</Nav.Link>
                     <Nav.Link onClick={handleRegister}>Register</Nav.Link>
                 </>
-            );               
+            );
         }
     }
 

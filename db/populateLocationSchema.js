@@ -7,7 +7,7 @@ const populateSchema = () => {
     Location.create({
       name: hospital.properties.Name,
       lat: hospital.geometry.coordinates[1],
-      long: hospital.geometry.coordinates[0],
+      lng: hospital.geometry.coordinates[0],
     });
   });
 };

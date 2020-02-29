@@ -11,8 +11,12 @@ import EnjoyPage from "./pages/EnjoyPage";
 
 import ConfirmPage from "./pages/ConfirmPage";
 
+//pull in context provider and wrap components
+// with it to make state/dispatch available to them
+import { ContextProvider } from "./appReducer";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -20,18 +24,38 @@ const App = () => {
       <Router>
         <header className="App-header">
           <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/takeoff" component={TakeOffPage} />
-            <Route exact path="/destination" component={DestinationPage} />
-            <Route exact path="/enjoy" component={EnjoyPage} />
-            <Route exact path="/confirm" component={ConfirmPage} />
-
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            <Route exact path="/takeoff">
+              <ContextProvider>
+                <TakeOffPage />
+              </ContextProvider>
+            </Route>
+            <Route exact path="/destination">
+              <ContextProvider>
+                <DestinationPage />
+              </ContextProvider>
+            </Route>
+            <Route exact path="/enjoy">
+              <EnjoyPage />
+            </Route>
+            <Route exact path="/confirm">
+              <ContextProvider>
+                <ConfirmPage />
+              </ContextProvider>
+            </Route>
           </Switch>
         </header>
       </Router>
     </div>
+
   )
 }
 

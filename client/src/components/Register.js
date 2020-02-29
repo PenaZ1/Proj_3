@@ -28,11 +28,9 @@ function Register() {
 
     return (
         <>
-
             <div className="Login">
                 <form>
                     <h2 id="cloudTitle"><b>Cloud</b>Carry</h2> <br />
-
                     <FormLabel>Email:</FormLabel>
                     <FormGroup controlId="email">
                         <FormControl
@@ -53,8 +51,7 @@ function Register() {
                     <span id="error">{res}</span> <br />
                     <Button onClick={signUp} type="submit">
                         Sign Up!
-        </Button>
-
+                    </Button>
                 </form>
             </div>
             <Hero></Hero>
