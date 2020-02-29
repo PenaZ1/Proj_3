@@ -36,7 +36,9 @@ const TakeOffPage = (props) => {
             <Navigation />
             <MapContainer center={center} />
             <ListGroup>
-                <ListGroupItem as="li" active>Please select your take off location!        <Button variant="secondary" size="sm" onClick={confirm}>Confirm</Button></ListGroupItem>
+                <ListGroupItem as="li" active>Please select your take off location!
+                <Button variant="secondary" size="sm" onClick={confirm}>Confirm</Button>
+                </ListGroupItem>
             </ListGroup>
             <TakeOff handleLocClick={handleLocClick} />
         </div>
