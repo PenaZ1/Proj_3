@@ -33,11 +33,11 @@ const DestinationPage = (props) => {
             <Navigation />
             <MapContainer center={center} />
             <ListGroup>
-                <ListGroupItem as="li" active>Please select your destination!</ListGroupItem>
+                <ListGroupItem as="li" active>Please select your destination!
+                <Button variant="secondary" size="sm" onClick={confirm}>Confirm</Button>
+                </ListGroupItem>
             </ListGroup>
-            <Destination handleLocClick={handleLocClick} />
-            <Button variant="secondary" size="lg" onClick={confirm}>Confirm</Button>
-        </div>
+            <Destination handleLocClick={handleLocClick} />        </div>
     )
 }
 
